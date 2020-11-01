@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://script/plateforme.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64, 8 )
+
+[node name="Plateforme" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 0
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+show_behind_parent = true
+position = Vector2( 10.0423, 7.66204 )
+scale = Vector2( 3.53414, 0.723181 )
+polygon = PoolVector2Array( -2.84152, -21.6571, -20.9506, -21.6571, -20.9506, 0.467323, 15.2676, 0.467323, 15.2676, -21.6571 )
